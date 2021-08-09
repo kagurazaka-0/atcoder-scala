@@ -11,6 +11,7 @@
 			"    val result = $1.run(lines)",
 			"    assertResult(result)(\"RESULT\")",
 			"  }",
+			"",
 			"  test(\"2\") {",
 			"    val lines = \"\"\"|\"\"\".stripMargin.split(\"\\n\")",
 			"",
@@ -21,5 +22,62 @@
 			""
 		],
 		"description": "Test for Atcoder"
+	},
+	"Test for Atcoder(1Line)": {
+		"prefix": "_test1line",
+		"body": [
+			"import org.scalatest._",
+			"",
+			"class $1Test extends FunSuite {",
+			"  test(\"1\") {",
+			"    val line = \"INPUT\"",
+			"    val result = $1.run(line)",
+			"    assertResult(result)(\"RESULT\")",
+			"  }",
+			"",
+			"  test(\"2\") {",
+			"    val line = \"INPUT\"",
+			"    val result = $1.run(line)",
+			"    assertResult(result)(\"RESULT\")",
+			"  }",
+			"}",
+			""
+		],
+		"description": "Test for Atcoder(1Line)"
+	},
+	"Main for Atcoder": {
+		"prefix": "_main",
+		"body": [
+			"import java.util.Scanner",
+			"",
+			"object $1 {",
+			"  def run(lines: Array[String]): String = {",
+			"    \"\"",
+			"  }",
+			"",
+			"  def main(args: Array[String]) = {",
+			"  }",
+			"}",
+			""
+		],
+		"description": "Main for Atcoder(1Line)"
+	},
+	"Main for Atcoder(1Line)": {
+		"prefix": "_main1line",
+		"body": [
+			"import java.util.Scanner",
+			"",
+			"object $0 {",
+			"  def run(line: String): String = {",
+			"    \"\"",
+			"  }",
+			"",
+			"  def main(args: Array[String]) = {",
+			"    println(run(new Scanner(System.in).nextLine()))",
+			"  }",
+			"}",
+			""
+		],
+		"description": "Main for Atcoder(1Line)"
 	}
 }
