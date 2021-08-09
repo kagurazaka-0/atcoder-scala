@@ -50,7 +50,7 @@
 		"body": [
 			"import java.util.Scanner",
 			"",
-			"object PracticeA {",
+			"object $1 {",
 			"  def run(lines: Array[String]): String = {",
 			"    \"\"",
 			"  }",
