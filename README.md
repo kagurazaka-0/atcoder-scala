@@ -9,3 +9,4 @@
 - [ABC081B - Shift only](https://atcoder.jp/contests/abs/tasks/abc081_b)
 - [ABC087B - Coins](https://atcoder.jp/contests/abs/tasks/abc087_b)
 - [ABC083B - Some Sums](https://atcoder.jp/contests/abs/tasks/abc083_b)
+- [ABC085B - Kagami Mochi](https://atcoder.jp/contests/abs/tasks/abc085_b)
