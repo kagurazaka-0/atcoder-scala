@@ -1,7 +1,6 @@
 import java.util.Scanner
-import scala.io.Source
 
-object PracticeA extends App {
+object PracticeA {
   def run(lines: Array[String]): String = {
     val intList = (lines(0).toInt) +: (lines(1).split(" ").map(_.toInt))
     val sum = intList.reduce(_ + _)
@@ -9,7 +8,16 @@ object PracticeA extends App {
     s"$sum $text"
   }
 
-  def main() = {
-    print(run(Source.fromFile("/dev/stdin").getLines().toArray))
+  // ANCHOR - common start
+  implicit def scannerToArray(sc: Scanner): Array[String] = {
+    var list = Array[String]()
+    do {
+      list = list :+ sc.nextLine()
+    } while (sc.hasNextLine())
+    list
   }
+  def main(args: Array[String]) = {
+    println(run(new Scanner(System.in)))
+  }
+  // ANCHOR - common end
 }
