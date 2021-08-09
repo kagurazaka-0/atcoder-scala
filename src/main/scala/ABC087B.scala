@@ -8,14 +8,21 @@ object ABC087B {
     val ns = lines.map(_.toInt)
     val (yen500, yen100, yen50, amount) = (ns(0), ns(1), ns(2), ns(3))
 
+    // NOTE: forは()ではなく、{}を使う方がベター
+    // val sums =
+    //   for (
+    //     sum500 <- (0 to yen500).map(500.*);
+    //     sum100 <- (0 to yen100).map(100.*);
+    //     sum50 <- (0 to yen50).map(50.*)
+    //   )
+    //     yield sum50 + sum100 + sum500
+
     // 500円玉、100円玉、50円玉の数の合計をそれぞれ総当たりしたArray
-    val sums =
-      for (
-        sum500 <- (0 to yen500).map(500.*);
-        sum100 <- (0 to yen100).map(100.*);
-        sum50 <- (0 to yen50).map(50.*)
-      )
-        yield sum50 + sum100 + sum500
+    val sums = for {
+      sum500 <- (0 to yen500).map(500.*)
+      sum100 <- (0 to yen100).map(100.*)
+      sum50 <- (0 to yen50).map(50.*)
+    } yield sum50 + sum100 + sum500
 
     val resultCount = sums.count(_ == amount)
     s"$resultCount"
