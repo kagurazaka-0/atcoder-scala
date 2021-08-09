@@ -7,7 +7,7 @@ class PracticeATest extends FunSuite {
                    |test""".stripMargin.split("\n")
 
     val result = PracticeA.run(lines)
-    assert(result === "6 test")
+    assertResult(result)("6 test")
   }
 
   test("入力例2") {
@@ -16,6 +16,6 @@ class PracticeATest extends FunSuite {
                    |myonmyon""".stripMargin.split("\n")
 
     val result = PracticeA.run(lines)
-    assert(result === "456 myonmyon")
+    assertResult(result)("456 myonmyon")
   }
 }

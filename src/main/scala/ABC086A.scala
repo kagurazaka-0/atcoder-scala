@@ -1,4 +1,5 @@
 import java.util.Scanner
+
 object ABC086A {
   def run(line: String): String = {
     val multiply = line.split(" ").map(_.toInt).reduce(_ * _)
