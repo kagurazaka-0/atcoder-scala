@@ -8,16 +8,13 @@ object PracticeA {
     s"$sum $text"
   }
 
-  // ANCHOR - common start
-  implicit def scannerToArray(sc: Scanner): Array[String] = {
-    var list = Array[String]()
-    do {
-      list = list :+ sc.nextLine()
-    } while (sc.hasNextLine())
-    list
+  implicit def scannerToIterator(scanner: Scanner) = new Iterator[String] {
+    def hasNext: Boolean = scanner.hasNextLine()
+    def next(): String = scanner.nextLine()
   }
+
   def main(args: Array[String]) = {
-    println(run(new Scanner(System.in)))
+    val scanner = new Scanner(System.in)
+    println(run(scanner.toArray))
   }
-  // ANCHOR - common end
 }

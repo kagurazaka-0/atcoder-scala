@@ -50,17 +50,24 @@
 		"body": [
 			"import java.util.Scanner",
 			"",
-			"object $1 {",
+			"object PracticeA {",
 			"  def run(lines: Array[String]): String = {",
 			"    \"\"",
 			"  }",
 			"",
+			"  implicit def scannerToIterator(scanner: Scanner) = new Iterator[String] {",
+			"    def hasNext: Boolean = scanner.hasNextLine()",
+			"    def next(): String = scanner.nextLine()",
+			"  }",
+			"",
 			"  def main(args: Array[String]) = {",
+			"    val scanner = new Scanner(System.in)",
+			"    println(run(scanner.toArray))",
 			"  }",
 			"}",
 			""
 		],
-		"description": "Main for Atcoder(1Line)"
+		"description": "Main for Atcoder"
 	},
 	"Main for Atcoder(1Line)": {
 		"prefix": "_main1line",
