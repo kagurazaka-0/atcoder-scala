@@ -11,6 +11,7 @@ object ABC086A {
   }
 
   def main(args: Array[String]) = {
-    println(run(new Scanner(System.in).nextLine()))
+    val scanner = new Scanner(System.in)
+    println(run(scanner.nextLine()))
   }
 }
