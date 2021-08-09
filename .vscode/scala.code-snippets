@@ -1,0 +1,25 @@
+{
+	"Test for Atcoder": {
+		"prefix": "_test",
+		"body": [
+			"import org.scalatest._",
+			"",
+			"class $1Test extends FunSuite {",
+			"  test(\"1\") {",
+			"    val lines = \"\"\"|\"\"\".stripMargin.split(\"\\n\")",
+			"",
+			"    val result = $1.run(lines)",
+			"    assertResult(result)(\"RESULT\")",
+			"  }",
+			"  test(\"2\") {",
+			"    val lines = \"\"\"|\"\"\".stripMargin.split(\"\\n\")",
+			"",
+			"    val result = $1.run(lines)",
+			"    assertResult(result)(\"RESULT\")",
+			"  }",
+			"}",
+			""
+		],
+		"description": "Test for Atcoder"
+	}
+}
