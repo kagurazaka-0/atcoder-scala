@@ -5,8 +5,10 @@ import java.util.Scanner
 
 object ABC087B {
   def run(lines: Array[String]): String = {
-    val ns = lines.map(_.toInt)
-    val (yen500, yen100, yen50, amount) = (ns(0), ns(1), ns(2), ns(3))
+    // val ns = lines.map(_.toInt)
+    // val (yen500, yen100, yen50, amount) = (ns(0), ns(1), ns(2), ns(3))
+    // NOTE: 左辺代入はパターンマッチが使える、そのためArrayの分割代入も可能
+    val Array(yen500, yen100, yen50, amount) = lines.map(_.toInt)
 
     // NOTE: forは()ではなく、{}を使う方がベター
     // val sums =
