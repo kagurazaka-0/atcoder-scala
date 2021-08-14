@@ -10,3 +10,4 @@
 - [ABC087B - Coins](https://atcoder.jp/contests/abs/tasks/abc087_b)
 - [ABC083B - Some Sums](https://atcoder.jp/contests/abs/tasks/abc083_b)
 - [ABC085B - Kagami Mochi](https://atcoder.jp/contests/abs/tasks/abc085_b)
+- [ABC049C - 白昼夢](https://atcoder.jp/contests/abs/tasks/arc065_a)
